@@ -39,14 +39,14 @@ jobs:
       - name: clear previous run
         run: sudo kill -9 $(sudo lsof -t -i:8081)
       - name: init deploy
-        run: sudo rm -rf self_hosted_demo/
+        run: sudo rm -rf github_action_demo/
       - name: pulling repo
-        run: git clone https://github.com/recafe54/self_hosted_demo.git
+        run: git clone https://github.com/khongtrunght/github_action_demo.git
       - name: checkout repo
-        run: cd self_hosted_demo
+        run: cd github_action_demo/
       - name: Install Python 3.6
         run: sudo apt-get update & sudo apt-get install python3.6 & python3 --version
       - name: Install dependencies
         run: sudo apt install python3-pip -y & sudo pip3 install -r requirements.txt
       - name: Deploy App
-        run: sudo python3 main.py 
+        run: sudo python3 main.py
