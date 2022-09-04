@@ -38,8 +38,8 @@ jobs:
     steps:
       # - name: clear previous run
       #   run: sudo kill -9 $(sudo lsof -t -i:8081)
-      # - name: init deploy
-      #   run: sudo rm -rf github_action_demo/
+      - name: init deploy
+        run: sudo rm -rf github_action_demo/
       - name: pulling repo
         run: git clone https://github.com/khongtrunght/github_action_demo.git
       - name: checkout repo
